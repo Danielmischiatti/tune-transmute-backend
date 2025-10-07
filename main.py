@@ -18,7 +18,7 @@ app.add_middleware(
 )
 
 # --- Endpoint: Transcrever áudio usando Whisper ---
-model = whisper.load_model("base")
+model = whisper.load_model("tiny")
 
 @app.post("/transcrever")
 async def transcrever(file: UploadFile = File(...)):
